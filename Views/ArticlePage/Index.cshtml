@@ -1,0 +1,44 @@
+﻿
+@using EPiServer.Core
+@model EpiserverTraining.Models.Pages.ArticlePage
+
+
+
+
+
+@{
+    ViewBag.Title = "Articles";
+}
+
+<div class="content">
+    <h2>@Html.PropertyFor(x => x.PageTitle)</h2>
+    <p>@Html.PropertyFor(x => x.MainBody)</p>
+
+
+
+</div>
+
+
+<div class="content">
+    <div>
+        <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+
+        @Html.PropertyFor(x => x.ArticlesArea.Count)
+        <div class="webinar-grid">
+            <div class="card-container">
+                @Html.PropertyFor(x => x.ArticlesArea, new {  })
+            </div>
+        </div>
+
+        @*<div class="webinar-grid">
+            @foreach (var contentAreaItem in Model.ArticlesArea.Items)
+            {
+                <div class="link-block">
+                    @Html.PropertyFor(x => contentAreaItem)
+                </div>
+            }
+        </div>*@
+
+    </div>
+
+

@@ -1,0 +1,20 @@
+﻿@model EpiserverTraining.Models.Blocks.ArticleBlock
+<div class="link-block">
+
+    <a href="">
+        <div class="jumbotron left-right-jumbotron-block">
+            <div class="webinar-image-container">
+                @Html.PropertyFor(x => x.ArticleImage)
+            </div>
+            <h1 class="dundas-blue-text-long">
+                @Html.PropertyFor(x => x.ArticleTitle)
+            </h1>
+
+            <div class="webinar-content-box">
+                <p>@Html.PropertyFor(x => x.ArticleDescription)</p>
+                <span class="dundas-blue-link">View article &gt;</span>
+            </div>
+        </div>
+    </a>
+</div>
+
