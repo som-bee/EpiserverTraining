@@ -10,9 +10,10 @@ using System.Web;
 
 namespace EpiserverTraining.Manager
 {
+    [ServiceConfiguration(Lifecycle = ServiceInstanceScope.Transient, ServiceType =typeof(IPageBuilder))]
     public class PageBuilder : IPageBuilder
     {
-        private readonly IContentRepository _contentRepository; // CRUD
+        private  IContentRepository _contentRepository; // CRUD
 
 
         //private readonly IContentLoader _contentLoader; // fetching only Read
@@ -22,9 +23,14 @@ namespace EpiserverTraining.Manager
 
 
         //constructor injector
-        public PageBuilder(IContentRepository contentRepository)
+        //public PageBuilder(IContentRepository contentRepository)
+        //{
+        //    _contentRepository = contentRepository;
+        //}
+
+        public PageBuilder()
         {
-            _contentRepository = contentRepository;
+            
         }
 
         public void CreateArticlePage()
@@ -32,6 +38,8 @@ namespace EpiserverTraining.Manager
             //IcontentRepo using servicelocator
            //var object = ServiceLocator.Current.GetInstance<>();
 
+
+             _contentRepository = ServiceLocator.Current.GetInstance<IContentRepository>();
             //getting article page with the id 6
             var articlePage = _contentRepository.Get<ArticlePage>(new ContentReference("6"));
 
