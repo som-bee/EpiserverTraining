@@ -2,6 +2,7 @@
 using EPiServer.DataAbstraction;
 using EPiServer.DataAnnotations;
 using EPiServer.SpecializedProperties;
+using EpiserverTraining.Models.Blocks;
 using System;
 using System.ComponentModel.DataAnnotations;
 
@@ -25,6 +26,14 @@ namespace EpiserverTraining.Models.Pages
             GroupName = SystemTabNames.Content,
             Order = 10)]
         public virtual XhtmlString MainBody { get; set; }
+
+        
+        [Display(
+          Name = "Navbar",
+          Description = "Navbar Menu",
+          GroupName = SystemTabNames.Content,
+          Order = 15)]
+        public virtual NavbarMenuBlock Navbar { get; set; }
 
     }
 }

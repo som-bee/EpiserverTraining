@@ -1,13 +1,16 @@
 ﻿
-@using EPiServer.Core
 @model EpiserverTraining.Models.Pages.ArticlePage
 
 
 
 
-
 @{
-    ViewBag.Title = "Articles";
+    ViewBag.Title = Model.PageTitle;
+   
+}
+
+@section Navbar {
+    @Html.PropertyFor(x => x.Navbar)
 }
 
 <div class="content">
@@ -36,13 +39,13 @@
         </div>
 
         @*<div class="webinar-grid">
-            @foreach (var contentAreaItem in Model.ArticlesArea.Items)
-            {
-                <div class="link-block">
-                    @Html.PropertyFor(x => contentAreaItem)
-                </div>
-            }
-        </div>*@
+                @foreach (var contentAreaItem in Model.ArticlesArea.Items)
+                {
+                    <div class="link-block">
+                        @Html.PropertyFor(x => contentAreaItem)
+                    </div>
+                }
+            </div>*@
 
     </div>
 

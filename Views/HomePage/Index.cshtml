@@ -1,10 +1,21 @@
 ﻿@model EpiserverTraining.Models.Pages.HomePage
+
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = Model.PageTitle;
+
 }
 
+@section Navbar {
+    @Html.PropertyFor(x => x.Navbar)
+}
 
 <div>
     <h2>@Html.PropertyFor(x => x.PageTitle)</h2>
     <p>@Html.PropertyFor(x => x.MainBody)</p>
 </div>
+
+
+
+
+<!-- Rest of the page content -->
+<!-- Add your page-specific HTML code here -->
