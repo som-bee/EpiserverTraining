@@ -1,13 +1,13 @@
-﻿@model EpiserverTraining.Models.Pages.HomePage
+﻿@model EpiserverTraining.Models.ViewModels.HomePageViewModel
 
 @{
     ViewBag.Title = Model.PageTitle;
 
 }
 
-@section Navbar {
+@*@section Navbar {
     @Html.PropertyFor(x => x.Navbar)
-}
+}*@
 
 <div>
     <h2>@Html.PropertyFor(x => x.PageTitle)</h2>

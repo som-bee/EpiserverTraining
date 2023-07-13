@@ -1,5 +1,5 @@
 ﻿
-@model EpiserverTraining.Models.Pages.ArticlePage
+@model EpiserverTraining.Models.ViewModels.ArticlePageViewModel
 
 
 
@@ -9,9 +9,9 @@
    
 }
 
-@section Navbar {
+@*@section Navbar {
     @Html.PropertyFor(x => x.Navbar)
-}
+}*@
 
 <div class="content">
     <h2>@Html.PropertyFor(x => x.PageTitle)</h2>

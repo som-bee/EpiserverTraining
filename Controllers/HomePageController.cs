@@ -4,6 +4,7 @@ using EPiServer.Framework.DataAnnotations;
 using EPiServer.Web.Mvc;
 using EpiserverTraining.Manager;
 using EpiserverTraining.Models.Pages;
+using EpiserverTraining.Models.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,12 +26,16 @@ namespace EpiserverTraining.Controllers
         public ActionResult Index(HomePage currentPage)
         {
 
-            performCRUD();
+            //performCRUD();
 
-            /* Implementation of action. You can create your own view model class that you pass to the view or
-             * you can pass the page type for simpler templates */
 
-            return View(currentPage);
+            var viewModel = new HomePageViewModel(currentPage)
+            {
+                MainBody = currentPage.MainBody
+            };
+            
+
+            return View(viewModel);
         }
 
         private void performCRUD()
