@@ -1,4 +1,6 @@
-﻿using System;
+﻿using EPiServer.Core;
+using EpiserverTraining.Models.Pages;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +10,12 @@ namespace EpiserverTraining.Manager
 {
     public interface IPageBuilder
     {
-        void CreateArticlePage();
+        ArticlePage CreateArticlePage();
+
+        ArticlePage GetArticlePage(int id);
+
+        void UpdateArticlePage(int id, ArticlePage model);
+
+        void DeleteArticlePage(int id);
     }
 }
