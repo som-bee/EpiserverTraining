@@ -34,7 +34,7 @@ body {
 .link-block {
     position: relative;
     width: 30%;
-    min-height: 400px;
+    min-height: 100px;
     text-align: center;
     margin: 20px auto;
     background-color: #f0f0f0;
@@ -221,8 +221,12 @@ body {
 
 /*article page*/
 .header-image {
-    height: 50vh; /* Set the height to 50% of the viewport height */
+    height: 80vh; /* Set the height to 50% of the viewport height */
     background-size: cover; /* Scale the background image to cover the entire container */
     background-position: center; /* Center the background image within the container */
     background-repeat: no-repeat; /* Prevent the background image from repeating */
+}
+
+a .article-card{
+    text-decoration : none;
 }

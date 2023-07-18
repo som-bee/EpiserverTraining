@@ -19,6 +19,6 @@ namespace EpiserverTraining.Models.ViewModels
 
         public virtual ContentArea ArticlesArea { get; set; }
 
-
+        public virtual List<ArticleDetailViewModel> ArticleList { get; set; }
     }
 }

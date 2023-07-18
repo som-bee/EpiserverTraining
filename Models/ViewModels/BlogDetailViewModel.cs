@@ -12,6 +12,8 @@ namespace EpiserverTraining.Models.ViewModels
 
         public virtual string BlogPageTitle { get; set; }
 
+        public virtual string BlogPageContentText { get; set; }
+
         public string Url { get; set; }
     }
 }

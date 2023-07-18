@@ -14,17 +14,21 @@
         }*@
 
 </div>
+<hr />
 <div class="row">
     @foreach (var blogPage in Model.blogPages)
     {
-        <div class="col-6">
+        <div class="col-6 mb-4">
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title">@blogPage.BlogPageTitle</h5>
+
                     <div style="height: 200px; overflow: hidden;">
                         <img src="@Url.ContentUrl(blogPage.HeaderImage)" style="object-fit: cover; width: 100%; height: 100%;" alt="Header Image">
                     </div>
-                    <p class="card-text">...</p>
+                    <br />
+                    
+                    <h5 class="card-title">@blogPage.BlogPageTitle</h5>
+                    <p class="card-text">@blogPage.BlogPageContentText ....</p>
                     <a href="@blogPage.Url" class="btn btn-primary">Go to Page</a>
                 </div>
             </div>
