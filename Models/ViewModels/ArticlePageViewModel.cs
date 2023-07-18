@@ -15,6 +15,10 @@ namespace EpiserverTraining.Models.ViewModels
         }
         public virtual XhtmlString MainBody { get; set; }
 
+        public virtual ContentReference HeaderImage { get; set; }
+
         public virtual ContentArea ArticlesArea { get; set; }
+
+
     }
 }

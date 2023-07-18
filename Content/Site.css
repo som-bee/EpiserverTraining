@@ -217,3 +217,12 @@ body {
     }
 }
 /* ============ small devices .end// ============ */
+
+
+/*article page*/
+.header-image {
+    height: 50vh; /* Set the height to 50% of the viewport height */
+    background-size: cover; /* Scale the background image to cover the entire container */
+    background-position: center; /* Center the background image within the container */
+    background-repeat: no-repeat; /* Prevent the background image from repeating */
+}

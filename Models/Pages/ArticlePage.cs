@@ -2,7 +2,9 @@
 using EPiServer.DataAbstraction;
 using EPiServer.DataAnnotations;
 using EPiServer.SpecializedProperties;
+using EPiServer.Web;
 using EpiserverTraining.Models.Blocks;
+using EpiserverTraining.Models.Media;
 using System;
 using System.ComponentModel.DataAnnotations;
 
@@ -43,5 +45,16 @@ namespace EpiserverTraining.Models.Pages
          GroupName = SystemTabNames.Content,
          Order = 15)]
         public virtual NavbarMenuBlock Navbar { get; set; }
+
+
+        [CultureSpecific]
+        [Display(
+          Name = "Header Image",
+          Description = "Article Page Header  Image",
+          GroupName = SystemTabNames.Content,
+          Order = 10)]
+        [UIHint(UIHint.Image)]
+        [AllowedTypes(new[] { typeof(ImageFileMedia) })]
+        public virtual ContentReference HeaderImage { get; set; }
     }
 }

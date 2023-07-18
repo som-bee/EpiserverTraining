@@ -6,18 +6,26 @@
 
 @{
     ViewBag.Title = Model.PageTitle;
-   
+
 }
 
 @*@section Navbar {
-    @Html.PropertyFor(x => x.Navbar)
-}*@
+        @Html.PropertyFor(x => x.Navbar)
+    }*@
+
+<div class="header-image" style="background-image: url('@Url.ContentUrl(Model.HeaderImage)');">
+    
+</div>
+
+
 
 <div class="content">
-    <h2>@Html.PropertyFor(x => x.PageTitle)</h2>
+    @*<img src=" @Url.ContentUrl(Model.HeaderImage)" alt="Header Image" />
+        <h2>@Html.PropertyFor(x => x.PageTitle)</h2>
+        <p>@Html.PropertyFor(x => x.MainBody)</p>*@
+
+    @*<h2>@Html.PropertyFor(x => x.PageTitle)</h2>*@
     <p>@Html.PropertyFor(x => x.MainBody)</p>
-
-
 
 </div>
 
@@ -26,7 +34,7 @@
     <div>
         <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
 
-        @Html.PropertyFor(x => x.ArticlesArea.Count)
+        @*@Html.PropertyFor(x => x.ArticlesArea.Count)*@
         <div class="webinar-grid">
             <div class="card-container">
                 @Html.PropertyFor(x => x.ArticlesArea, new

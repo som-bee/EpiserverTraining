@@ -27,7 +27,8 @@ namespace EpiserverTraining.Controllers
             var viewModel = new ArticlePageViewModel(currentPage)
             {
                 MainBody = currentPage.MainBody,
-                ArticlesArea = currentPage.ArticlesArea
+                ArticlesArea = currentPage.ArticlesArea,
+                HeaderImage = currentPage.HeaderImage
             };
 
 

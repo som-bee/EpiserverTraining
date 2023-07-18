@@ -2,6 +2,7 @@
 using EPiServer.Core;
 using EPiServer.Framework.DataAnnotations;
 using EPiServer.Web.Mvc;
+using EPiServer.ServiceLocation;
 using EpiserverTraining.Manager;
 using EpiserverTraining.Models.Pages;
 using EpiserverTraining.Models.ViewModels;
@@ -14,9 +15,9 @@ namespace EpiserverTraining.Controllers
 {
     public class HomePageController : PageController<HomePage>
     {
-        private IPageBuilder _pageBuilder;
+        private Injected<IPageBuilder>  _pageBuilder;
 
-      
+
 
         //public HomePageController(IPageBuilder pageBuilder)
         //{
@@ -41,10 +42,10 @@ namespace EpiserverTraining.Controllers
         private void performCRUD()
         {
             //creating new Article page using PageBuilder
-            _pageBuilder = new PageBuilder();
+            //_pageBuilder = new PageBuilder();
 
             //CREATE
-            //var newPage = _pageBuilder.CreateArticlePage(); 
+            var newPage = _pageBuilder.Service.CreateArticlePage(); 
 
 
 
