@@ -250,6 +250,14 @@
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
   <ItemGroup>
+    <Compile Include="Business\Plugin\CustomPlugIn.aspx.cs">
+      <DependentUpon>CustomPlugIn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Business\Plugin\CustomPlugIn.aspx.designer.cs">
+      <DependentUpon>CustomPlugIn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Business\Plugin\CustomPluginController.cs" />
     <Compile Include="Business\RouteConfig.cs" />
     <Compile Include="Controllers\ArticleBlockController.cs" />
     <Compile Include="Controllers\ArticlePageController.cs" />
@@ -288,6 +296,7 @@
     <Folder Include="wwwroot\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Business\Plugin\CustomPlugIn.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-grid.rtl.css" />
@@ -487,6 +496,7 @@
     <Content Include="Scripts\jquery-3.7.0.min.map" />
     <Content Include="Views\NavbarMenuBlock\Index.cshtml" />
     <Content Include="Views\BlogListingPage\Index.cshtml" />
+    <Content Include="Views\CustomPlugin\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -34,7 +34,7 @@ namespace EpiserverTraining.Controllers
 
             //performCRUD();
 
-            EpiFindTest();
+            //EpiFindTest();
 
 
             var viewModel = new HomePageViewModel(currentPage)
