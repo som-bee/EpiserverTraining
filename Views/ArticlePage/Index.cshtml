@@ -35,7 +35,7 @@
         <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
 
         @*@Html.PropertyFor(x => x.ArticlesArea.Count)*@
-        @*<div class="webinar-grid">
+        <div class="webinar-grid">
             <div class="card-container">
                 @Html.PropertyFor(x => x.ArticlesArea, new
            {
@@ -44,12 +44,12 @@
                HasEditContainer = false
            })
             </div>
-        </div>*@
+        </div>
         <hr />
 
 
 
-    <div class="webinar-grid">
+    @*<div class="webinar-grid">
         @foreach (var article in Model.ArticleList)
         {
             <div class="link-block">
@@ -72,7 +72,7 @@
             </div>
 
         }
-    </div>
+    </div>*@
 
     </div>
 
