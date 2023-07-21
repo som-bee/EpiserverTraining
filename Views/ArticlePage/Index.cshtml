@@ -36,14 +36,14 @@
 
         @*@Html.PropertyFor(x => x.ArticlesArea.Count)*@
         <div class="webinar-grid">
-            <div class="card-container">
+            
                 @Html.PropertyFor(x => x.ArticlesArea, new
            {
                HasContainer = false,
                HasItemContainer = false,
                HasEditContainer = false
            })
-            </div>
+            
         </div>
         <hr />
 
