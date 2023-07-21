@@ -250,6 +250,7 @@
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
   <ItemGroup>
+    <Compile Include="Business\Extensions\ServiceConfigurationContextExtensions.cs" />
     <Compile Include="Business\Plugin\CustomPlugIn.aspx.cs">
       <DependentUpon>CustomPlugIn.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
